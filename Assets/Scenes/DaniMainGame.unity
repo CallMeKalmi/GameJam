@@ -541,7 +541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1324811203
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -622,7 +622,7 @@ PrefabInstance:
       objectReference: {fileID: 1184807385}
     - target: {fileID: 3833537415105944682, guid: bedf81baf144dc94280a69847f5fcc13, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3833537415105944683, guid: bedf81baf144dc94280a69847f5fcc13, type: 3}
       propertyPath: m_RootOrder

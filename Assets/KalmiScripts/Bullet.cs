@@ -11,4 +11,13 @@ public class Bullet : MonoBehaviour
         transform.Translate(Vector2.right * _speed * Time.deltaTime);
     }
 
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Bug"))
+    //    {
+    //        Destroy(collision.gameObject);
+    //        //Health--;
+    //    }
+    //}
+
 }
