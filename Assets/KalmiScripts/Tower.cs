@@ -8,7 +8,7 @@ public class Tower : MonoBehaviour
     Transform _target;
     bool _thereIsTarget;
     [SerializeField] GameObject _bullet;
-    //float _speed = 5f;
+    //float speed = 5f;
     float _time = 0;
     float _fireRate = 1f;
 
