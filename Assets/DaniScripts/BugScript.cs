@@ -67,15 +67,31 @@ public class BugScript : MonoBehaviour
     //    Health = Health - damageAmount;
     //}
 
-    void OnTriggerEnter(Collider other)
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.tag == "Bug")
+    //    {
+    //        Health--;
+    //        Destroy(other.gameObject);
+    //    }
+
+    //}
+
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Bullet"))
+    //    {
+    //        Debug.Log("Hit");
+    //        Health--;
+    //        Destroy(collision.gameObject);
+    //    }
+    //}
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.tag == "Bug")
+        if (collision.CompareTag("Bullet"))
         {
+            Destroy(collision.gameObject);
             Health--;
-            Destroy(other.gameObject);
         }
-
     }
-
-
 }
