@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 1101144060}
   - component: {fileID: 1101144061}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4670400b2e3ce40beba2770861a60c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bullet: {fileID: 0}
+  _bullet: {fileID: 140997079630869694, guid: fc3094ea9c90f104c8e9eceaaa673cb8, type: 3}
 --- !u!50 &1101144061
 Rigidbody2D:
   serializedVersion: 4

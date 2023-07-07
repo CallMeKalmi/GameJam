@@ -15,13 +15,18 @@ public class Tower : MonoBehaviour
     private void Update()
     {
         RotateTowards();
-        //Shoot();
+        Shoot();
 
 
     }
 
     private void Shoot()
     {
+        if (!_thereIsTarget)
+        {
+            _time = 0;
+            return;
+        }
         _time+= Time.deltaTime;
         if (_time >= _fireRate)
         {
