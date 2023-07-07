@@ -2,16 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Scripting.APIUpdating;
-using static UnityEngine.GraphicsBuffer;
+using UnityEngine.UIElements;
 
-public class BugScript : MonoBehaviour
+public class BugType2Script : MonoBehaviour
 {
-    public int Health = 5;
+    public int Health = 3;
     //public MeshRenderer Renderer;
     //public Material[] Material;
     private int _index = 0;
     public GameObject Goal;
+    public Collider [] CloseBugs;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +26,25 @@ public class BugScript : MonoBehaviour
         Move();
         Arrived();
         ManualDamage();
+        CheckForCloseBugs();
+        Inspire();
+    }
+
+    private void CheckForCloseBugs()
+    {
+        CloseBugs = Physics.OverlapSphere(transform.position, 2);
+    }
+
+    private void Inspire()
+    {
+
+        if (UnityEngine.Input.GetKeyDown("C"))
+        {
+            foreach(Collider c in CloseBugs)
+            {
+
+            }
+        }
     }
 
     private void ManualDamage()
