@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 public class MainMenuExitButton : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void LoadGame()
+    public void QuitGame()
     {
-        SceneManager.LoadScene(0);
+        Application.Quit();
+        Debug.Log("Quit");
     }
 }

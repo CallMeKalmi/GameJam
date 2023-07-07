@@ -833,7 +833,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 830468215}
         m_TargetAssemblyTypeName: MainMenuExitButton, Assembly-CSharp
-        m_MethodName: LoadGame
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
