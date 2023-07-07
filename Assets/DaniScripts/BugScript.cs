@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
+using static UnityEngine.GraphicsBuffer;
 
 public class BugScript : MonoBehaviour
 {
@@ -61,8 +62,20 @@ public class BugScript : MonoBehaviour
         }
     }
 
-    void TakeNormalDamage(int damageAmount)
+    //void TakeNormalDamage(int damageAmount)
+    //{
+    //    Health = Health - damageAmount;
+    //}
+
+    void OnTriggerEnter(Collider other)
     {
-        Health = Health - damageAmount;
+        if (other.gameObject.tag == "Bug")
+        {
+            Health--;
+            Destroy(other.gameObject);
+        }
+
     }
+
+
 }
