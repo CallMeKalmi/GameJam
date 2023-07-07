@@ -8,6 +8,7 @@ using static UnityEngine.GraphicsBuffer;
 public class BugScript : MonoBehaviour
 {
     public int Health = 5;
+    public float Speed = 0.75f;
     //public MeshRenderer Renderer;
     //public Material[] Material;
     private int _index = 0;
@@ -46,7 +47,7 @@ public class BugScript : MonoBehaviour
 
     private void Move()
     {
-        transform.position = Vector3.MoveTowards(transform.position, Goal.transform.position, 0.75f * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, Goal.transform.position, Speed * Time.deltaTime);
     }
 
     private void UpdateMaterial()
