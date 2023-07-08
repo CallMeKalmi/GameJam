@@ -27,7 +27,11 @@ public class BugType3 : MonoBehaviour
 
     void Start()
     {
-        
+        Waypoints[0] = GameObject.FindGameObjectWithTag("W1").transform;
+        Waypoints[1] = GameObject.FindGameObjectWithTag("W2").transform;
+        Waypoints[2] = GameObject.FindGameObjectWithTag("W3").transform;
+        Waypoints[3] = GameObject.FindGameObjectWithTag("W4").transform;
+        Waypoints[4] = GameObject.FindGameObjectWithTag("W5").transform;
     }
 
     // Update is called once per frame
@@ -86,42 +90,42 @@ public class BugType3 : MonoBehaviour
     {
         if (StartMoving)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Waypoints[0].transform.position, Speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, Waypoints[0].position, Speed * Time.deltaTime);
         }
 
         if (StartMoving2)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Waypoints[1].transform.position, Speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, Waypoints[1].position, Speed * Time.deltaTime);
         }
         if (StartMoving3)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Waypoints[2].transform.position, Speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, Waypoints[2].position, Speed * Time.deltaTime);
         }
         if (StartMoving4)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Waypoints[3].transform.position, Speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, Waypoints[3].position, Speed * Time.deltaTime);
         }
         if (StartMoving5)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Waypoints[4].transform.position, Speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, Waypoints[4].position, Speed * Time.deltaTime);
         }
 
-        if (Vector3.Distance(transform.position, Waypoints[0].transform.position) < 0.05f)
+        if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("W1").transform.position) < 0.05f)
         {
             StartMoving = false;
             StartMoving2 = true;
         }
-        if (Vector3.Distance(transform.position, Waypoints[1].transform.position) < 0.05f)
+        if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("W2").transform.position) < 0.05f)
         {
             StartMoving2 = false;
             StartMoving3 = true;
         }
-        if (Vector3.Distance(transform.position, Waypoints[2].transform.position) < 0.05f)
+        if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("W3").transform.position) < 0.05f)
         {
             StartMoving3 = false;
             StartMoving4 = true;
         }
-        if (Vector3.Distance(transform.position, Waypoints[3].transform.position) < 0.05f)
+        if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("W4").transform.position) < 0.05f)
         {
             StartMoving4 = false;
             StartMoving5 = true;

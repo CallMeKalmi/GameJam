@@ -12,6 +12,22 @@ TagManager:
   - SlowBullet
   - W1
   - W2
+  - W3
+  - W4
+  - L1
+  - L2
+  - L3
+  - L4
+  - R1
+  - R2
+  - R3
+  - R4
+  - W5
+  - R5
+  - L5
+  - Button1
+  - Button2
+  - Button3
   layers:
   - Default
   - TransparentFX
