@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 //using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 using static UnityEngine.GraphicsBuffer;
 
 public class Objective : MonoBehaviour
 {
     [SerializeField] int _hp = 2;
     [SerializeField] Button _button;
+    [SerializeField] int _numberOfObjectives;
+    [SerializeField] string _nextSceneName;
     // Update is called once per frame
     void Update()
     {
@@ -16,6 +19,12 @@ public class Objective : MonoBehaviour
         {
             Destroy(gameObject);
             _button.interactable = false;
+            _numberOfObjectives--;
+            if (_numberOfObjectives < 1)
+            {
+                SceneManager.LoadScene(_nextSceneName);
+            }
+            
         }
     }
 
