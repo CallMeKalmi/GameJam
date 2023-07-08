@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -11,7 +12,10 @@ public class BugType2Script : MonoBehaviour
     //public Material[] Material;
     private int _index = 0;
     public GameObject Goal;
-    public Collider [] CloseBugs;
+    public int NumberBugs;
+    public float Distance;
+    public GameObject[] Bugs;
+    public GameObject [] CloseBugs;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,25 +30,44 @@ public class BugType2Script : MonoBehaviour
         Move();
         Arrived();
         ManualDamage();
+        CountBugs();
         CheckForCloseBugs();
         Inspire();
     }
 
+    private void CountBugs()
+    {
+        Bugs = GameObject.FindGameObjectsWithTag("Bug");
+        NumberBugs = Bugs.Length;
+    }
+
     private void CheckForCloseBugs()
     {
-        CloseBugs = Physics.OverlapSphere(transform.position, 2);
+        for(int i = 0; i < NumberBugs; i++) 
+        {
+            foreach(GameObject go in Bugs)
+            {
+                Distance = Vector3.Distance(gameObject.transform.position, Bugs[i].transform.position);
+
+                if (Distance < 5)
+                {
+                    CloseBugs[i] =  go;
+                }
+            }
+
+        }
     }
 
     private void Inspire()
     {
 
-        if (UnityEngine.Input.GetKeyDown(""))
-        {
-            foreach(Collider c in CloseBugs)
-            {
+        //if (UnityEngine.Input.GetKeyDown(""))
+        //{
+        //    foreach(Collider c in CloseBugs)
+        //    {
                 
-            }
-        }
+        //    }
+        //}
     }
 
     private void ManualDamage()
