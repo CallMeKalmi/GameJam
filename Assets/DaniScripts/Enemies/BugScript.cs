@@ -27,7 +27,6 @@ public class BugScript : MonoBehaviour
     void Update()
     {
         Destroyed();
-        UpdateMaterial();
         Move();
         //Arrived();
         ManualDamage();
@@ -75,10 +74,7 @@ public class BugScript : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, Goal.transform.position, Speed * Time.deltaTime);
     }
 
-    private void UpdateMaterial()
-    {
-        //Renderer.material = Material[_index];
-    }
+
 
     private void Destroyed()
     {

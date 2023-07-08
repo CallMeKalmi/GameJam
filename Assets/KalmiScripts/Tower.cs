@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Tower : MonoBehaviour
 {
@@ -11,16 +13,41 @@ public class Tower : MonoBehaviour
     //float speed = 5f;
     float _time = 0;
     float _fireRate = 1f;
+    public Boolean TimerStart;
+    public float Timer;
+    public Boolean Active = true;
 
     private void Update()
     {
-        if (_target == null)
+        if (Active == true)
         {
-            _thereIsTarget = false;
-        }
-        RotateTowards();
-        Shoot();
+            if (_target == null)
+            {
+                _thereIsTarget = false;
+            }
+            RotateTowards();
+            Shoot();
 
+        }
+        UpdateTimer();
+
+
+
+    }
+
+    private void UpdateTimer()
+    {
+        if(TimerStart == true)
+        {
+            Timer = Timer + Time.deltaTime;
+            if (Timer > 2)
+            {
+                Timer = 0;
+                TimerStart = false;
+                Active = true;
+
+            }
+        }
 
     }
 
@@ -51,6 +78,12 @@ public class Tower : MonoBehaviour
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
         
+    }
+
+    void Deactivate()
+    {
+        Active =false;
+        TimerStart = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
