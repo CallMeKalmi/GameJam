@@ -424,6 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 2
+  _button: {fileID: 1198707303}
 --- !u!50 &469714643
 Rigidbody2D:
   serializedVersion: 4
@@ -1109,6 +1110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 2
+  _button: {fileID: 1769868818}
 --- !u!50 &1289734912
 Rigidbody2D:
   serializedVersion: 4
@@ -1838,9 +1840,6 @@ MonoBehaviour:
   _attackButton1: {fileID: 1792168085}
   _attackButton2: {fileID: 1198707303}
   _attackButton3: {fileID: 1769868818}
-  _objective1: {fileID: 1978087318}
-  _objective2: {fileID: 469714641}
-  _objective3: {fileID: 1289734910}
   _prefabObject: {fileID: 3129356077111919504, guid: a0248ebbdb3d4d74982eac758eb9503b, type: 3}
 --- !u!1 &1769868816
 GameObject:
@@ -2460,11 +2459,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956935033}
   m_CullTransparentMesh: 1
---- !u!1 &1978087318 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4319064763170640729, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
-  m_PrefabInstance: {fileID: 4319064762980132047}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2058094723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2607,6 +2601,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
+      propertyPath: _button
+      value: 
+      objectReference: {fileID: 1792168085}
     - target: {fileID: 4319064763170640727, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: m_RootOrder
       value: 6
