@@ -21,6 +21,15 @@ public class BugType4 : MonoBehaviour
     public Boolean TimerStart2;
     public float Timer2;
     public float SpeedTime2;
+
+    public Boolean StartMoving = true;
+    public Boolean StartMoving1;
+    public Boolean StartMoving2;
+    public Boolean StartMoving3;
+    public Boolean StartMoving4;
+    public Boolean StartMoving5;
+
+    public Transform[] Waypoints;
     // Start is called before the first frame update
     void Start()
     {
@@ -96,7 +105,48 @@ public class BugType4 : MonoBehaviour
 
     private void Move()
     {
-        transform.position = Vector3.MoveTowards(transform.position, Goal.transform.position, Speed * Time.deltaTime);
+        if (StartMoving)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, Waypoints[0].transform.position, Speed * Time.deltaTime);
+        }
+
+        if (StartMoving2)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, Waypoints[1].transform.position, Speed * Time.deltaTime);
+        }
+        if (StartMoving3)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, Waypoints[2].transform.position, Speed * Time.deltaTime);
+        }
+        if (StartMoving4)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, Waypoints[3].transform.position, Speed * Time.deltaTime);
+        }
+        if (StartMoving5)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, Waypoints[4].transform.position, Speed * Time.deltaTime);
+        }
+
+        if (Vector3.Distance(transform.position, Waypoints[0].transform.position) < 0.05f)
+        {
+            StartMoving = false;
+            StartMoving2 = true;
+        }
+        if (Vector3.Distance(transform.position, Waypoints[1].transform.position) < 0.05f)
+        {
+            StartMoving2 = false;
+            StartMoving3 = true;
+        }
+        if (Vector3.Distance(transform.position, Waypoints[2].transform.position) < 0.05f)
+        {
+            StartMoving3 = false;
+            StartMoving4 = true;
+        }
+        if (Vector3.Distance(transform.position, Waypoints[3].transform.position) < 0.05f)
+        {
+            StartMoving4 = false;
+            StartMoving5 = true;
+        }
     }
 
 
