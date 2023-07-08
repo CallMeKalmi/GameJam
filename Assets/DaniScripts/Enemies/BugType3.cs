@@ -110,22 +110,22 @@ public class BugType3 : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, Waypoints[4].position, Speed * Time.deltaTime);
         }
 
-        if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("W1").transform.position) < 0.05f)
+        if (Vector3.Distance(transform.position, Waypoints[1].position) < 0.05f)
         {
             StartMoving = false;
             StartMoving2 = true;
         }
-        if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("W2").transform.position) < 0.05f)
+        if (Vector3.Distance(transform.position, Waypoints[2].position) < 0.05f)
         {
             StartMoving2 = false;
             StartMoving3 = true;
         }
-        if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("W3").transform.position) < 0.05f)
+        if (Vector3.Distance(transform.position, Waypoints[3].position) < 0.05f)
         {
             StartMoving3 = false;
             StartMoving4 = true;
         }
-        if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("W4").transform.position) < 0.05f)
+        if (Vector3.Distance(transform.position, Waypoints[4].position) < 0.05f)
         {
             StartMoving4 = false;
             StartMoving5 = true;

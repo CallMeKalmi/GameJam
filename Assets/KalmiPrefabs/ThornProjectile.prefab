@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 9057850873518025983}
   - component: {fileID: 9057850873518025970}
   - component: {fileID: 9057850873518025969}
-  - component: {fileID: -5829768894104691752}
+  - component: {fileID: -4108523748067761636}
   m_Layer: 0
   m_Name: ThornProjectile
   m_TagString: Thorn
@@ -203,7 +203,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -219,7 +219,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-5829768894104691752
+--- !u!114 &-4108523748067761636
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,6 +228,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9057850873518025982}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b44cdd5c6669e204e8b791ead57ba1ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 0be76bb0b3416a0448b64f4cae64b334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
