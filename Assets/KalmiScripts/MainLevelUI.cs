@@ -33,9 +33,9 @@ public class MainLevelUI : MonoBehaviour
 
     Vector2 _spawnLocation;
     [SerializeField] GameObject _prefabObject;
-    [SerializeField] Transform _spawnPoit1;
-    [SerializeField] Transform _spawnPoit2;
-    [SerializeField] Transform _spawnPoit3;
+    //[SerializeField] Transform _spawnPoit1;
+    //[SerializeField] Transform _spawnPoit2;
+    //[SerializeField] Transform _spawnPoit3;
     // Start is called before the first frame update
     void Start()
     {
@@ -86,10 +86,10 @@ public class MainLevelUI : MonoBehaviour
         _button3.interactable = true;
         _button4.interactable = true;
 
-        //RectTransform uiElementRect = _attackButton3.GetComponent<RectTransform>();
+        RectTransform uiElementRect = _attackButton3.GetComponent<RectTransform>();
         //Vector3 uiElementScreenPos = RectTransformUtility.WorldToScreenPoint(Camera.main, uiElementRect.position);
         //_spawnLocation = Camera.main.ScreenToWorldPoint(uiElementScreenPos);
-        //_spawnLocation = uiElementRect.position;
+        _spawnLocation = uiElementRect.position;
     }
 
     public void FirstBugSpawn()
@@ -108,6 +108,7 @@ public class MainLevelUI : MonoBehaviour
             return;
         }
         _secondBugNumber--;
+        Instantiate(_prefabObject, _spawnLocation, Quaternion.identity);
     }
     public void ThirdBugSpawn()
     {
@@ -116,6 +117,7 @@ public class MainLevelUI : MonoBehaviour
             return;
         }
         _thirdBugNumber--;
+        Instantiate(_prefabObject, _spawnLocation, Quaternion.identity);
     }
     public void FourthBugSpawn()
     {
@@ -124,5 +126,6 @@ public class MainLevelUI : MonoBehaviour
             return;
         }
         _fourthBugNumber--;
+        Instantiate(_prefabObject, _spawnLocation, Quaternion.identity);
     }
 }
