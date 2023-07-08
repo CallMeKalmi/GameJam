@@ -3,11 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 //using UnityEngine.UIElements;
 
 public class MainLevelUI : MonoBehaviour
 {
+    public static int NumberOfObjectives;
+    [SerializeField] int _numberOfObjectives;
+
     [SerializeField] Button _button1;
     [SerializeField] Button _button2;
     [SerializeField] Button _button3;
@@ -36,11 +40,15 @@ public class MainLevelUI : MonoBehaviour
     Transform _spawnPoit1;
     Transform _spawnPoit2;
     Transform _spawnPoit3;
+
+    int _bugsLeft;
+    
     // Start is called before the first frame update
     void Start()
     {
         DeactivateBottomButtons();
         
+        NumberOfObjectives = _numberOfObjectives;
 
         _spawnPoit1 = _attackButton1.GetComponent<RectTransform>();
         _spawnPoit2 = _attackButton2.GetComponent<RectTransform>();
@@ -65,9 +73,20 @@ public class MainLevelUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //AddBugsLeft();
         TextUpdate();
         CheckIfPathsAreAvalible();
     }
+
+    //private void AddBugsLeft()
+    //{
+    //    _bugsLeft = _firstBugNumber + _secondBugNumber + _thirdBugNumber + _firstBugNumber;
+
+    //    if (_bugsLeft<)
+    //    {
+
+    //    }
+    //}
 
     private void CheckIfPathsAreAvalible()
     {
@@ -149,5 +168,10 @@ public class MainLevelUI : MonoBehaviour
         }
         _fourthBugNumber--;
         Instantiate(_prefabObject, _spawnLocation, Quaternion.identity);
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
