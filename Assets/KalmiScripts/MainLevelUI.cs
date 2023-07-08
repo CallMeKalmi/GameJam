@@ -36,7 +36,10 @@ public class MainLevelUI : MonoBehaviour
     int _fourthBugNumber = 6;
 
     Vector3 _spawnLocation;
-    [SerializeField] GameObject _prefabObject;
+    [SerializeField] GameObject _prefabAnt;
+    [SerializeField] GameObject _prefabLadybug;
+    [SerializeField] GameObject _prefabBeetle;
+    [SerializeField] GameObject _prefabFly;
     Transform _spawnPoit1;
     Transform _spawnPoit2;
     Transform _spawnPoit3;
@@ -140,7 +143,7 @@ public class MainLevelUI : MonoBehaviour
             return;
         }
         _firstBugNumber--;
-        Instantiate(_prefabObject, _spawnLocation, Quaternion.identity);
+        Instantiate(_prefabAnt, _spawnLocation, Quaternion.identity);
     }
     public void SecondBugSpawn()
     {
@@ -149,7 +152,7 @@ public class MainLevelUI : MonoBehaviour
             return;
         }
         _secondBugNumber--;
-        Instantiate(_prefabObject, _spawnLocation, Quaternion.identity);
+        Instantiate(_prefabLadybug, _spawnLocation, Quaternion.identity);
     }
     public void ThirdBugSpawn()
     {
@@ -158,7 +161,7 @@ public class MainLevelUI : MonoBehaviour
             return;
         }
         _thirdBugNumber--;
-        Instantiate(_prefabObject, _spawnLocation, Quaternion.identity);
+        Instantiate(_prefabBeetle, _spawnLocation, Quaternion.identity);
     }
     public void FourthBugSpawn()
     {
@@ -167,7 +170,7 @@ public class MainLevelUI : MonoBehaviour
             return;
         }
         _fourthBugNumber--;
-        Instantiate(_prefabObject, _spawnLocation, Quaternion.identity);
+        Instantiate(_prefabFly, _spawnLocation, Quaternion.identity);
     }
 
     public void RestartLevel()

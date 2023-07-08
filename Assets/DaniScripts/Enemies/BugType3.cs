@@ -8,9 +8,6 @@ public class BugType3 : MonoBehaviour
 {
     public int Health = 12;
     public float Speed = 0.4f;
-    //public MeshRenderer Renderer;
-    //public Material[] Material;
-    public GameObject Goal;
     public Boolean TimerStart;
     public float Timer;
     public float SpeedTime;
@@ -38,7 +35,6 @@ public class BugType3 : MonoBehaviour
     {
         Destroyed();
         Move();
-        //Arrived();
         ManualDamage();
         StartTimer();
         StartTimer2();
@@ -83,15 +79,7 @@ public class BugType3 : MonoBehaviour
     void Speedboost(float timer)
     {
         TimerStart = true;
-        Speed = 1.25f;
-    }
-
-    private void Arrived()
-    {
-        if (transform.position == Goal.transform.position)
-        {
-            Destroy(gameObject);
-        }
+        Speed = 0.6f;
     }
 
     private void Move()

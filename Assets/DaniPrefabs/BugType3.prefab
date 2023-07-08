@@ -230,3 +230,15 @@ MonoBehaviour:
   TimerStart2: 0
   Timer2: 0
   SpeedTime2: 0
+  StartMoving: 1
+  StartMoving1: 0
+  StartMoving2: 0
+  StartMoving3: 0
+  StartMoving4: 0
+  StartMoving5: 0
+  Waypoints:
+  - {fileID: 8847641631237888604, guid: 811bb5726636d1745911f912f4cc138a, type: 3}
+  - {fileID: 251311342101284731, guid: 395aec182def26a42a21c29f816abe0a, type: 3}
+  - {fileID: 3938299074472342243, guid: de4254972a8e93f49b429d2a079df0d7, type: 3}
+  - {fileID: 4078303583359623277, guid: 3c0deb7125d82fd41abbf93a3744e466, type: 3}
+  - {fileID: 4707856516068135199, guid: c921beb5fba3ad749a7b92eed16f0c82, type: 3}

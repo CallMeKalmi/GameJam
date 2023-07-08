@@ -10,7 +10,6 @@ public class BugType2Script : MonoBehaviour
     public int Health = 3;
     public float Speed = 1.25f;
 
-    public GameObject Goal;
     public int NumberBugs;
     public float Distance;
     public GameObject[] Bugs;

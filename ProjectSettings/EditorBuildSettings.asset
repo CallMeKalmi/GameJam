@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: 5e5305e4c7749cd428b27fc71ac03f79
+  - enabled: 1
+    path: Assets/Scenes/DaniMainGame.unity
+    guid: 568d49ea2ff34da458a1a1b0184d1aa2
   m_configObjects: {}

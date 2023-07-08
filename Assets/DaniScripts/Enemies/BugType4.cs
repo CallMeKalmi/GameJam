@@ -9,8 +9,6 @@ public class BugType4 : MonoBehaviour
 {
     public int Health = 1;
     public float Speed = 1.5f;
-
-    public GameObject Goal;
     public Boolean TimerStart;
     public float Timer;
     public float SpeedTime;
@@ -92,16 +90,10 @@ public class BugType4 : MonoBehaviour
     void Speedboost(float timer)
     {
         TimerStart = true;
-        Speed = 1.25f;
+        Speed = 2f;
     }
 
-    private void Arrived()
-    {
-        if (transform.position == Goal.transform.position)
-        {
-            Destroy(gameObject);
-        }
-    }
+
 
     private void Move()
     {

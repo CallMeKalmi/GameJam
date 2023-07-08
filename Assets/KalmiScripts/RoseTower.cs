@@ -15,7 +15,6 @@ public class RoseTower : MonoBehaviour
     public Boolean TimerStart;
     public float Timer;
     public Boolean Active = true;
-
     private void Update()
     {
         if (Active == true)
@@ -55,7 +54,6 @@ public class RoseTower : MonoBehaviour
         {
             _time = 0;
             Instantiate(_bullet, transform.position, transform.rotation);
-
         }
 
 
