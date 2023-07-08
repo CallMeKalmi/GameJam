@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
+using UnityEngine.UIElements;
 using static UnityEngine.GraphicsBuffer;
 
 public class BugScript : MonoBehaviour
@@ -13,6 +14,9 @@ public class BugScript : MonoBehaviour
     //public Material[] Material;
     private int _index = 0;
     public GameObject Goal;
+    public Boolean TimerStart;
+    public float Timer;
+    public float SpeedTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +31,21 @@ public class BugScript : MonoBehaviour
         Move();
         //Arrived();
         ManualDamage();
+        StartTimer();
+    }
+
+    private void StartTimer()
+    {
+        if (TimerStart == true)
+        {
+            Timer = Timer + Time.deltaTime;
+            if (Timer > 5f)
+            {
+                Speed = 0.75f;
+                Timer = 0;
+                TimerStart = false;
+            }
+        }
     }
 
     private void ManualDamage()
@@ -35,6 +54,12 @@ public class BugScript : MonoBehaviour
         {
             Health--;
         }
+    }
+
+    void Speedboost(float timer)
+    {
+        TimerStart = true;
+        Speed = 1.25f;
     }
 
     private void Arrived()

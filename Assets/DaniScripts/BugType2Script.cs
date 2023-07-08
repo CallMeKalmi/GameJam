@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 public class BugType2Script : MonoBehaviour
 {
     public int Health = 3;
+    public float Speed = 1.25f;
     //public MeshRenderer Renderer;
     //public Material[] Material;
     private int _index = 0;
@@ -15,7 +16,8 @@ public class BugType2Script : MonoBehaviour
     public int NumberBugs;
     public float Distance;
     public GameObject[] Bugs;
-    public GameObject [] CloseBugs;
+    public Boolean TimerStart;
+    public float Timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +33,22 @@ public class BugType2Script : MonoBehaviour
         Arrived();
         ManualDamage();
         CountBugs();
-        CheckForCloseBugs();
-        Inspire();
+        StartTimer();
+
+    }
+
+    private void StartTimer()
+    {
+        if (TimerStart == true)
+        {
+            Timer = Timer + Time.deltaTime;
+            if (Timer > 5f)
+            {
+                Speed = 1.25f;
+                Timer = 0;
+                TimerStart = false;
+            }
+        }
     }
 
     private void CountBugs()
@@ -41,33 +57,30 @@ public class BugType2Script : MonoBehaviour
         NumberBugs = Bugs.Length;
     }
 
-    private void CheckForCloseBugs()
-    {
-        for(int i = 0; i < NumberBugs; i++) 
-        {
-            foreach(GameObject go in Bugs)
-            {
-                Distance = Vector3.Distance(gameObject.transform.position, Bugs[i].transform.position);
 
-                if (Distance < 5)
+
+    private void Inspire()
+    {
+        foreach(GameObject go in Bugs )
+        {
+            if (go != null)
+            {
+                Distance = Vector3.Distance(gameObject.transform.position, go.transform.position);
+
+                if (Distance < 2.5f)
                 {
-                    CloseBugs[i] =  go;
+                    go.gameObject.SendMessage("Speedboost", 5f);
                 }
             }
+
 
         }
     }
 
-    private void Inspire()
+    void Speedboost(float timer)
     {
-
-        //if (UnityEngine.Input.GetKeyDown(""))
-        //{
-        //    foreach(Collider c in CloseBugs)
-        //    {
-                
-        //    }
-        //}
+        TimerStart = true;
+        Speed = 1.5f;
     }
 
     private void ManualDamage()
@@ -88,7 +101,7 @@ public class BugType2Script : MonoBehaviour
 
     private void Move()
     {
-        transform.position = Vector3.MoveTowards(transform.position, Goal.transform.position, 0.75f * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, Goal.transform.position, Speed * Time.deltaTime);
     }
 
     private void UpdateMaterial()
@@ -101,6 +114,7 @@ public class BugType2Script : MonoBehaviour
         if (Health < 1)
         {
             Destroy(gameObject);
+            Inspire();
         }
     }
 
