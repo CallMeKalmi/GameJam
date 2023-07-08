@@ -55,7 +55,7 @@ public class BugType3 : MonoBehaviour
         if (TimerStart == true)
         {
             Timer = Timer + Time.deltaTime;
-            if (Timer > 5f)
+            if (Timer > 2f)
             {
                 Speed = 0.75f;
                 Timer = 0;
