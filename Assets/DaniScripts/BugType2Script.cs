@@ -38,11 +38,11 @@ public class BugType2Script : MonoBehaviour
     private void Inspire()
     {
 
-        if (UnityEngine.Input.GetKeyDown("C"))
+        if (UnityEngine.Input.GetKeyDown(""))
         {
             foreach(Collider c in CloseBugs)
             {
-
+                
             }
         }
     }
@@ -86,14 +86,13 @@ public class BugType2Script : MonoBehaviour
     //    Health = Health - damageAmount;
     //}
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.tag == "Bug")
+        if (collision.CompareTag("Bullet"))
         {
+            Destroy(collision.gameObject);
             Health--;
-            Destroy(other.gameObject);
         }
-
     }
 
 

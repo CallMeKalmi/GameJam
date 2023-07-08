@@ -25,7 +25,7 @@ public class BugScript : MonoBehaviour
         Destroyed();
         UpdateMaterial();
         Move();
-        Arrived();
+        //Arrived();
         ManualDamage();
     }
 
