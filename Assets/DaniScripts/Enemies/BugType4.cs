@@ -17,6 +17,10 @@ public class BugType4 : MonoBehaviour
     public GameObject[] Turrets;
     public int NumberTurrets;
     public float Distance;
+
+    public Boolean TimerStart2;
+    public float Timer2;
+    public float SpeedTime2;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,12 +35,27 @@ public class BugType4 : MonoBehaviour
         ManualDamage();
         StartTimer();
         CountTurrets();
+        StartTimer2();
     }
 
     private void CountTurrets()
     {
         Turrets = GameObject.FindGameObjectsWithTag("Turret");
         NumberTurrets = Turrets.Length;
+    }
+
+    private void StartTimer2()
+    {
+        if (TimerStart2 == true)
+        {
+            Timer2 = Timer2 + Time.deltaTime;
+            if (Timer2 > 5f)
+            {
+                Speed = 0.75f;
+                Timer2 = 0;
+                TimerStart2 = false;
+            }
+        }
     }
 
     private void StartTimer()
@@ -117,6 +136,18 @@ public class BugType4 : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Health--;
+        }
+        if (collision.CompareTag("Thorn"))
+        {
+            Destroy(collision.gameObject);
+            Health--;
+        }
+        if (collision.CompareTag("SlowBullet"))
+        {
+            Destroy(collision.gameObject);
+            Health--;
+            Speed = 1f;
+            TimerStart2 = true;
         }
     }
 }

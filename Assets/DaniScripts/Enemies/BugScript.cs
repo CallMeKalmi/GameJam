@@ -10,13 +10,14 @@ public class BugScript : MonoBehaviour
 {
     public int Health = 5;
     public float Speed = 0.75f;
-    //public MeshRenderer Renderer;
-    //public Material[] Material;
-    private int _index = 0;
     public GameObject Goal;
     public Boolean TimerStart;
     public float Timer;
     public float SpeedTime;
+
+    public Boolean TimerStart2;
+    public float Timer2;
+    public float SpeedTime2;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,9 +29,23 @@ public class BugScript : MonoBehaviour
     {
         Destroyed();
         Move();
-        //Arrived();
         ManualDamage();
         StartTimer();
+        StartTimer2();
+    }
+
+    private void StartTimer2()
+    {
+        if (TimerStart2 == true)
+        {
+            Timer2 = Timer2 + Time.deltaTime;
+            if (Timer2 > 5f)
+            {
+                Speed = 0.75f;
+                Timer2 = 0;
+                TimerStart2 = false;
+            }
+        }
     }
 
     private void StartTimer()
@@ -61,13 +76,7 @@ public class BugScript : MonoBehaviour
         Speed = 1.25f;
     }
 
-    private void Arrived()
-    {
-        if (transform.position == Goal.transform.position)
-        {
-            Destroy(gameObject);
-        }
-    }
+
 
     private void Move()
     {
@@ -114,6 +123,18 @@ public class BugScript : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Health--;
+        }
+        if (collision.CompareTag("Thorn"))
+        {
+            Destroy(collision.gameObject);
+            Health--;
+        }
+        if (collision.CompareTag("SlowBullet"))
+        {
+            Destroy(collision.gameObject);
+            Health--;
+            Speed = 0.5f;
+            TimerStart2 = true;
         }
     }
 }

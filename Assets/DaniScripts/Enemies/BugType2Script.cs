@@ -9,15 +9,17 @@ public class BugType2Script : MonoBehaviour
 {
     public int Health = 3;
     public float Speed = 1.25f;
-    //public MeshRenderer Renderer;
-    //public Material[] Material;
-    private int _index = 0;
+
     public GameObject Goal;
     public int NumberBugs;
     public float Distance;
     public GameObject[] Bugs;
     public Boolean TimerStart;
     public float Timer;
+
+    public Boolean TimerStart2;
+    public float Timer2;
+    public float SpeedTime2;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,13 +30,27 @@ public class BugType2Script : MonoBehaviour
     void Update()
     {
         Destroyed();
-        UpdateMaterial();
+
         Move();
-        Arrived();
         ManualDamage();
         CountBugs();
         StartTimer();
+        StartTimer2();
 
+    }
+
+    private void StartTimer2()
+    {
+        if (TimerStart2 == true)
+        {
+            Timer2 = Timer2 + Time.deltaTime;
+            if (Timer2 > 5f)
+            {
+                Speed = 0.75f;
+                Timer2 = 0;
+                TimerStart2 = false;
+            }
+        }
     }
 
     private void StartTimer()
@@ -91,23 +107,13 @@ public class BugType2Script : MonoBehaviour
         }
     }
 
-    private void Arrived()
-    {
-        if (transform.position == Goal.transform.position)
-        {
-            Destroy(gameObject);
-        }
-    }
+
 
     private void Move()
     {
         transform.position = Vector3.MoveTowards(transform.position, Goal.transform.position, Speed * Time.deltaTime);
     }
 
-    private void UpdateMaterial()
-    {
-        //Renderer.material = Material[_index];
-    }
 
     private void Destroyed()
     {
@@ -129,6 +135,18 @@ public class BugType2Script : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Health--;
+        }
+        if (collision.CompareTag("Thorn"))
+        {
+            Destroy(collision.gameObject);
+            Health--;
+        }
+        if (collision.CompareTag("SlowBullet"))
+        {
+            Destroy(collision.gameObject);
+            Health--;
+            Speed = 0.75f;
+            TimerStart2 = true;
         }
     }
 

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class BugType3 : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class BugType3 : MonoBehaviour
     public Boolean TimerStart;
     public float Timer;
     public float SpeedTime;
+
+    public Boolean TimerStart2;
+    public float Timer2;
+    public float SpeedTime2;
     // Start is called before the first frame update
     // Start is called before the first frame update
     void Start()
@@ -28,7 +33,22 @@ public class BugType3 : MonoBehaviour
         //Arrived();
         ManualDamage();
         StartTimer();
+        StartTimer2();
 
+    }
+
+    private void StartTimer2()
+    {
+        if (TimerStart2 == true)
+        {
+            Timer2 = Timer2 + Time.deltaTime;
+            if (Timer2 > 5f)
+            {
+                Speed = 0.4f;
+                Timer2 = 0;
+                TimerStart2 = false;
+            }
+        }
     }
     private void StartTimer()
     {
@@ -93,6 +113,13 @@ public class BugType3 : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Health = Health - 3;
+        }
+        if (collision.CompareTag("SlowBullet"))
+        {
+            Destroy(collision.gameObject);
+            Health--;
+            Speed = 0.2f;
+            TimerStart2 = true;
         }
     }
 }

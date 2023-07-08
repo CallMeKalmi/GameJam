@@ -7,6 +7,9 @@ TagManager:
   - Bug
   - Bullet
   - b
+  - Turret
+  - Thorn
+  - SlowBullet
   layers:
   - Default
   - TransparentFX
