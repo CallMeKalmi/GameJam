@@ -14,6 +14,10 @@ public class Tower : MonoBehaviour
 
     private void Update()
     {
+        if (_target == null)
+        {
+            _thereIsTarget = false;
+        }
         RotateTowards();
         Shoot();
 
