@@ -39,7 +39,7 @@ public class BugScript : MonoBehaviour
         if (TimerStart2 == true)
         {
             Timer2 = Timer2 + Time.deltaTime;
-            if (Timer2 > 5f)
+            if (Timer2 > 2f)
             {
                 Speed = 0.75f;
                 Timer2 = 0;

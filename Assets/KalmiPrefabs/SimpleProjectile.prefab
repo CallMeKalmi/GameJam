@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5829768894104691752}
   m_Layer: 0
   m_Name: SimpleProjectile
-  m_TagString: SlowBullet
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
