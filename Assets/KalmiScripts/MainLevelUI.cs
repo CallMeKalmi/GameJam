@@ -143,6 +143,7 @@ public class MainLevelUI : MonoBehaviour
             return;
         }
         _firstBugNumber--;
+        _spawnLocation.z = 0;
         Instantiate(_prefabAnt, _spawnLocation, Quaternion.identity);
     }
     public void SecondBugSpawn()
@@ -152,6 +153,7 @@ public class MainLevelUI : MonoBehaviour
             return;
         }
         _secondBugNumber--;
+        _spawnLocation.z = 0;
         Instantiate(_prefabLadybug, _spawnLocation, Quaternion.identity);
     }
     public void ThirdBugSpawn()
@@ -161,6 +163,7 @@ public class MainLevelUI : MonoBehaviour
             return;
         }
         _thirdBugNumber--;
+        _spawnLocation.z = 0;
         Instantiate(_prefabBeetle, _spawnLocation, Quaternion.identity);
     }
     public void FourthBugSpawn()
@@ -170,6 +173,7 @@ public class MainLevelUI : MonoBehaviour
             return;
         }
         _fourthBugNumber--;
+        _spawnLocation.z = 0;
         Instantiate(_prefabFly, _spawnLocation, Quaternion.identity);
     }
 

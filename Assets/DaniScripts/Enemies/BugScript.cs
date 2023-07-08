@@ -88,12 +88,13 @@ public class BugScript : MonoBehaviour
     {
         if (StartMoving)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Waypoints[0].transform.position, Speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position,/* Waypoints[0].transform.position*/ GameObject.FindGameObjectWithTag("W1").transform.position, Speed * Time.deltaTime);
+            Debug.Log("Mozognia kone");
         }
 
         if (StartMoving2)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Waypoints[1].transform.position, Speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, GameObject.FindGameObjectWithTag("W2").transform.position, Speed * Time.deltaTime);
         }
         if (StartMoving3)
         {
@@ -108,12 +109,12 @@ public class BugScript : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, Waypoints[4].transform.position, Speed * Time.deltaTime);
         }
 
-        if (Vector3.Distance(transform.position, Waypoints[0].transform.position) < 0.05f)
+        if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("W1").transform.position) < 0.05f)
         {
             StartMoving = false;
             StartMoving2 = true;
         }
-        if (Vector3.Distance(transform.position, Waypoints[1].transform.position) < 0.05f)
+        if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("W2").transform.position) < 0.05f)
         {
             StartMoving2 = false;
             StartMoving3 = true;

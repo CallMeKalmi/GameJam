@@ -10,6 +10,8 @@ TagManager:
   - Turret
   - Thorn
   - SlowBullet
+  - W1
+  - W2
   layers:
   - Default
   - TransparentFX
