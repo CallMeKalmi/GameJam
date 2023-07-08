@@ -340,7 +340,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 408619099}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1560257516}
+        m_TargetAssemblyTypeName: MainLevelUI, Assembly-CSharp
+        m_MethodName: SecondBugSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &408619099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,7 +785,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1117106296}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1560257516}
+        m_TargetAssemblyTypeName: MainLevelUI, Assembly-CSharp
+        m_MethodName: FourthBugSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1117106296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1001,7 +1025,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1198707304}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1560257516}
+        m_TargetAssemblyTypeName: MainLevelUI, Assembly-CSharp
+        m_MethodName: SecondAttackButtonPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1198707304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1259,7 +1295,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1311577228}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1560257516}
+        m_TargetAssemblyTypeName: MainLevelUI, Assembly-CSharp
+        m_MethodName: FirstBugSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1311577228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1793,6 +1841,7 @@ MonoBehaviour:
   _objective1: {fileID: 1978087318}
   _objective2: {fileID: 469714641}
   _objective3: {fileID: 1289734910}
+  _prefabObject: {fileID: 3129356077111919504, guid: a0248ebbdb3d4d74982eac758eb9503b, type: 3}
 --- !u!1 &1769868816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,7 +1924,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1769868819}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1560257516}
+        m_TargetAssemblyTypeName: MainLevelUI, Assembly-CSharp
+        m_MethodName: ThirdAttackButtonPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1769868819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2080,7 +2141,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1792168086}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1560257516}
+        m_TargetAssemblyTypeName: MainLevelUI, Assembly-CSharp
+        m_MethodName: FirstAttackButtonPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1792168086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2201,7 +2274,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1893774010}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1560257516}
+        m_TargetAssemblyTypeName: MainLevelUI, Assembly-CSharp
+        m_MethodName: ThirdBugSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1893774010
 MonoBehaviour:
   m_ObjectHideFlags: 0
