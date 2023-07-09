@@ -3385,7 +3385,7 @@ MonoBehaviour:
   _attackButton1: {fileID: 363183999}
   _attackButton2: {fileID: 190266455}
   _attackButton3: {fileID: 286543949}
-  _firstBugNumber: 5
+  _firstBugNumber: 8
   _secondBugNumber: 4
   _thirdBugNumber: 2
   _fourthBugNumber: 4
