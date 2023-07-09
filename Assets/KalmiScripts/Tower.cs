@@ -40,7 +40,7 @@ public class Tower : MonoBehaviour
         if(TimerStart == true)
         {
             Timer = Timer + Time.deltaTime;
-            if (Timer > 2)
+            if (Timer > 3)
             {
                 Timer = 0;
                 TimerStart = false;
