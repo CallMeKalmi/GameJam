@@ -2191,7 +2191,7 @@ PrefabInstance:
       objectReference: {fileID: 190266455}
     - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: _nextSceneName
-      value: Game
+      value: Level3
       objectReference: {fileID: 0}
     - target: {fileID: 4319064763170640727, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: m_RootOrder
@@ -2260,7 +2260,7 @@ PrefabInstance:
       objectReference: {fileID: 363183999}
     - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: _nextSceneName
-      value: Game
+      value: Level3
       objectReference: {fileID: 0}
     - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: _numberOfObjectives
