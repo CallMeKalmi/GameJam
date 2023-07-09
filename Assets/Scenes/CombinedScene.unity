@@ -561,6 +561,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5078289752021635000, guid: 3464b9e7359593f40a6c8f428a047726, type: 3}
+      propertyPath: m_TagString
+      value: Turret
+      objectReference: {fileID: 0}
     - target: {fileID: 5078289752021635001, guid: 3464b9e7359593f40a6c8f428a047726, type: 3}
       propertyPath: m_Color.a
       value: 0

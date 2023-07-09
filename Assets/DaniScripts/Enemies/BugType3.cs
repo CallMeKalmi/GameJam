@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 public class BugType3 : MonoBehaviour
 {
     public int Health = 12;
-    public float Speed = 0.75f;
+    public float Speed = 0.9f;
     public Boolean TimerStart;
     public float Timer;
     public float SpeedTime;
@@ -81,7 +81,7 @@ public class BugType3 : MonoBehaviour
             Timer2 = Timer2 + Time.deltaTime;
             if (Timer2 > 2f)
             {
-                Speed = 0.75f;
+                Speed = 0.9f;
                 Timer2 = 0;
                 TimerStart2 = false;
             }
@@ -94,7 +94,7 @@ public class BugType3 : MonoBehaviour
             Timer = Timer + Time.deltaTime;
             if (Timer > 2.5f)
             {
-                Speed = 0.75f;
+                Speed = 0.9f;
                 Timer = 0;
                 TimerStart = false;
             }
