@@ -33,8 +33,6 @@ public class BugScript : MonoBehaviour
     public bool Path2;
     public bool Path3;
 
-    public AudioSource Src;
-    public AudioClip Sfx1;
     // Start is called before the first frame update
     void Start()
     {
@@ -225,17 +223,12 @@ public class BugScript : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Health--;
-            Src.clip = Sfx1;
-            Src.volume = 0.5f;
-            Src.Play();
         }
         if (collision.CompareTag("Thorn"))
         {
             Destroy(collision.gameObject);
             Health--;
-            Src.clip = Sfx1;
-            Src.volume = 0.5f;
-            Src.Play();
+
 
         }
         if (collision.CompareTag("SlowBullet"))
@@ -244,9 +237,7 @@ public class BugScript : MonoBehaviour
             Health--;
             Speed = 0.5f;
             TimerStart2 = true;
-            Src.clip = Sfx1;
-            Src.volume = 0.5f;
-            Src.Play();
+
         }
     }
 }

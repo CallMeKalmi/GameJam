@@ -65,6 +65,9 @@ public class MainLevelUI : MonoBehaviour
     float _time = 0;
     float _spawnRate = 0.25f;
 
+    public AudioSource Src;
+    public AudioClip Sfx1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -194,6 +197,9 @@ public class MainLevelUI : MonoBehaviour
         _firstBugNumber--;
         _spawnLocation.z = 0;
         Instantiate(_currentFirstBug, _spawnLocation, Quaternion.identity);
+        Src.clip = Sfx1;
+        Src.volume = 0.2f;
+        Src.Play();
     }
     
 
@@ -208,6 +214,9 @@ public class MainLevelUI : MonoBehaviour
         _secondBugNumber--;
         _spawnLocation.z = 0;
         Instantiate(_currentSecondBug, _spawnLocation, Quaternion.identity);
+        Src.clip = Sfx1;
+        Src.volume = 0.2f;
+        Src.Play();
     }
     
     
@@ -222,6 +231,9 @@ public class MainLevelUI : MonoBehaviour
         _thirdBugNumber--;
         _spawnLocation.z = 0;
         Instantiate(_currentThirdBug, _spawnLocation, Quaternion.identity);
+        Src.clip = Sfx1;
+        Src.volume = 0.2f;
+        Src.Play();
     }
     
     public void FourthBugSpawn()
@@ -235,6 +247,9 @@ public class MainLevelUI : MonoBehaviour
         _fourthBugNumber--;
         _spawnLocation.z = 0;
         Instantiate(_currentFourthBug, _spawnLocation, Quaternion.identity);
+        Src.clip = Sfx1;
+        Src.volume = 0.2f;
+        Src.Play();
     }
     
 

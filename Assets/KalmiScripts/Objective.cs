@@ -12,6 +12,8 @@ public class Objective : MonoBehaviour
     [SerializeField] Button _button;
     //[SerializeField] int _numberOfObjectives;
     [SerializeField] string _nextSceneName;
+    public AudioSource Src;
+    public AudioClip Sfx1;
     // Update is called once per frame
     void Update()
     {
@@ -22,6 +24,9 @@ public class Objective : MonoBehaviour
             MainLevelUI.NumberOfObjectives--;
             if (MainLevelUI.NumberOfObjectives < 1)
             {
+                Src.clip = Sfx1;
+                Src.volume = 0.01f;
+                Src.Play();
                 SceneManager.LoadScene(_nextSceneName);
             }
             

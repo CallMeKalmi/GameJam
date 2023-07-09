@@ -1538,6 +1538,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 5078289752021635004, guid: 3464b9e7359593f40a6c8f428a047726, type: 3}
+      propertyPath: Src
+      value: 
+      objectReference: {fileID: 1324563892}
+    - target: {fileID: 5078289752021635004, guid: 3464b9e7359593f40a6c8f428a047726, type: 3}
+      propertyPath: Sfx1
+      value: 
+      objectReference: {fileID: 8300000, guid: d713052d26494024f8b97996b22908ee, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3464b9e7359593f40a6c8f428a047726, type: 3}
 --- !u!1 &619345080
@@ -2186,6 +2194,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
+      propertyPath: Src
+      value: 
+      objectReference: {fileID: 1324563892}
+    - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
+      propertyPath: Sfx1
+      value: 
+      objectReference: {fileID: 8300000, guid: 503de17458464aa4b95f0bd68c695b96, type: 3}
+    - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: _button
       value: 
       objectReference: {fileID: 190266455}
@@ -2251,9 +2267,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
+      propertyPath: Src
+      value: 
+      objectReference: {fileID: 1324563892}
+    - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: _hp
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
+      propertyPath: Sfx1
+      value: 
+      objectReference: {fileID: 8300000, guid: 503de17458464aa4b95f0bd68c695b96, type: 3}
     - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: _button
       value: 
@@ -2651,6 +2675,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1324563892 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8038787642067451047, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+  m_PrefabInstance: {fileID: 1544892986}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1324811202
 GameObject:
   m_ObjectHideFlags: 0
@@ -2988,6 +3017,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1544892986
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3983787537813645277, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_Name
+      value: SoundEffects
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7088e194127f58049a10cc65816e1931, type: 3}
 --- !u!1 &1571582192
 GameObject:
   m_ObjectHideFlags: 0
@@ -3048,6 +3134,8 @@ MonoBehaviour:
   _prefabLadybug3: {fileID: 0}
   _prefabBeetle3: {fileID: 0}
   _prefabFly3: {fileID: 0}
+  Src: {fileID: 1324563892}
+  Sfx1: {fileID: 8300000, guid: d0e553d35e7ecb5419318d177a01eaeb, type: 3}
 --- !u!114 &1571582194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3599,6 +3687,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 5078289752021635004, guid: 3464b9e7359593f40a6c8f428a047726, type: 3}
+      propertyPath: Src
+      value: 
+      objectReference: {fileID: 1324563892}
+    - target: {fileID: 5078289752021635004, guid: 3464b9e7359593f40a6c8f428a047726, type: 3}
+      propertyPath: Sfx1
+      value: 
+      objectReference: {fileID: 8300000, guid: d713052d26494024f8b97996b22908ee, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3464b9e7359593f40a6c8f428a047726, type: 3}
 --- !u!4 &1846682125 stripped
@@ -3838,5 +3934,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoseTower
       objectReference: {fileID: 0}
+    - target: {fileID: 2850026909484615655, guid: 9cd5b84f8cbc166409d55c49d64f6158, type: 3}
+      propertyPath: Src
+      value: 
+      objectReference: {fileID: 1324563892}
+    - target: {fileID: 2850026909484615655, guid: 9cd5b84f8cbc166409d55c49d64f6158, type: 3}
+      propertyPath: Sfx1
+      value: 
+      objectReference: {fileID: 8300000, guid: d713052d26494024f8b97996b22908ee, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cd5b84f8cbc166409d55c49d64f6158, type: 3}

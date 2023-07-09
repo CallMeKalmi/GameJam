@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6023959300017064121, guid: 0e6300cb3852a87439931e63cd668d36, type: 3}
+      propertyPath: Src
+      value: 
+      objectReference: {fileID: 1170490296}
+    - target: {fileID: 6023959300017064121, guid: 0e6300cb3852a87439931e63cd668d36, type: 3}
+      propertyPath: Sfx1
+      value: 
+      objectReference: {fileID: 8300000, guid: d713052d26494024f8b97996b22908ee, type: 3}
     - target: {fileID: 6023959300017064125, guid: 0e6300cb3852a87439931e63cd668d36, type: 3}
       propertyPath: m_Name
       value: TowerBasic
@@ -223,6 +231,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &105018822
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3983787537813645277, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_Name
+      value: SoundEffects
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_RootOrder
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949881232028521771, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7088e194127f58049a10cc65816e1931, type: 3}
 --- !u!1 &138850450
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +582,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6023959300017064121, guid: 0e6300cb3852a87439931e63cd668d36, type: 3}
+      propertyPath: Src
+      value: 
+      objectReference: {fileID: 1170490296}
+    - target: {fileID: 6023959300017064121, guid: 0e6300cb3852a87439931e63cd668d36, type: 3}
+      propertyPath: Sfx1
+      value: 
+      objectReference: {fileID: 8300000, guid: d713052d26494024f8b97996b22908ee, type: 3}
     - target: {fileID: 6023959300017064125, guid: 0e6300cb3852a87439931e63cd668d36, type: 3}
       propertyPath: m_Name
       value: TowerBasic (1)
@@ -639,6 +712,8 @@ MonoBehaviour:
   _prefabLadybug3: {fileID: 3635491569916279072, guid: 4931a7feed037ca40ac3405c291ae3d8, type: 3}
   _prefabBeetle3: {fileID: 3880846419865366887, guid: 1575b935174f1bc439db23c9a72fbdca, type: 3}
   _prefabFly3: {fileID: 5967677490128432119, guid: bba8f71d68756dd40a19dc1bce8c915f, type: 3}
+  Src: {fileID: 1170490296}
+  Sfx1: {fileID: 8300000, guid: d0e553d35e7ecb5419318d177a01eaeb, type: 3}
 --- !u!114 &355808765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,6 +923,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6023959300017064121, guid: 0e6300cb3852a87439931e63cd668d36, type: 3}
+      propertyPath: Src
+      value: 
+      objectReference: {fileID: 1170490296}
+    - target: {fileID: 6023959300017064121, guid: 0e6300cb3852a87439931e63cd668d36, type: 3}
+      propertyPath: Sfx1
+      value: 
+      objectReference: {fileID: 8300000, guid: d713052d26494024f8b97996b22908ee, type: 3}
     - target: {fileID: 6023959300017064125, guid: 0e6300cb3852a87439931e63cd668d36, type: 3}
       propertyPath: m_Name
       value: TowerBasic (3)
@@ -1051,9 +1134,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
+      propertyPath: Src
+      value: 
+      objectReference: {fileID: 1170490296}
+    - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: _hp
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
+      propertyPath: Sfx1
+      value: 
+      objectReference: {fileID: 8300000, guid: 503de17458464aa4b95f0bd68c695b96, type: 3}
     - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: _button
       value: 
@@ -1349,6 +1440,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6023959300017064121, guid: 0e6300cb3852a87439931e63cd668d36, type: 3}
+      propertyPath: Src
+      value: 
+      objectReference: {fileID: 1170490296}
+    - target: {fileID: 6023959300017064121, guid: 0e6300cb3852a87439931e63cd668d36, type: 3}
+      propertyPath: Sfx1
+      value: 
+      objectReference: {fileID: 8300000, guid: d713052d26494024f8b97996b22908ee, type: 3}
     - target: {fileID: 6023959300017064125, guid: 0e6300cb3852a87439931e63cd668d36, type: 3}
       propertyPath: m_Name
       value: TowerBasic (2)
@@ -1859,6 +1958,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlowingTower
       objectReference: {fileID: 0}
+    - target: {fileID: 382201612723090727, guid: d9d69beb05b9a9946abbea28433e2d9b, type: 3}
+      propertyPath: Src
+      value: 
+      objectReference: {fileID: 1170490296}
+    - target: {fileID: 382201612723090727, guid: d9d69beb05b9a9946abbea28433e2d9b, type: 3}
+      propertyPath: Sfx1
+      value: 
+      objectReference: {fileID: 8300000, guid: d713052d26494024f8b97996b22908ee, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9d69beb05b9a9946abbea28433e2d9b, type: 3}
 --- !u!1 &1090135617
@@ -1900,9 +2007,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
+      propertyPath: Src
+      value: 
+      objectReference: {fileID: 1170490296}
+    - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: _hp
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
+      propertyPath: Sfx1
+      value: 
+      objectReference: {fileID: 8300000, guid: 503de17458464aa4b95f0bd68c695b96, type: 3}
     - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: _button
       value: 
@@ -2270,8 +2385,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoseTower
       objectReference: {fileID: 0}
+    - target: {fileID: 2850026909484615655, guid: 9cd5b84f8cbc166409d55c49d64f6158, type: 3}
+      propertyPath: Src
+      value: 
+      objectReference: {fileID: 1170490296}
+    - target: {fileID: 2850026909484615655, guid: 9cd5b84f8cbc166409d55c49d64f6158, type: 3}
+      propertyPath: Sfx1
+      value: 
+      objectReference: {fileID: 8300000, guid: d713052d26494024f8b97996b22908ee, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cd5b84f8cbc166409d55c49d64f6158, type: 3}
+--- !u!82 &1170490296 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8038787642067451047, guid: 7088e194127f58049a10cc65816e1931, type: 3}
+  m_PrefabInstance: {fileID: 105018822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1181222373
 GameObject:
   m_ObjectHideFlags: 0
@@ -2747,9 +2875,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
+      propertyPath: Src
+      value: 
+      objectReference: {fileID: 1170490296}
+    - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: _hp
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
+      propertyPath: Sfx1
+      value: 
+      objectReference: {fileID: 8300000, guid: 503de17458464aa4b95f0bd68c695b96, type: 3}
     - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: _button
       value: 
@@ -3676,6 +3812,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoseTower (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2850026909484615655, guid: 9cd5b84f8cbc166409d55c49d64f6158, type: 3}
+      propertyPath: Src
+      value: 
+      objectReference: {fileID: 1170490296}
+    - target: {fileID: 2850026909484615655, guid: 9cd5b84f8cbc166409d55c49d64f6158, type: 3}
+      propertyPath: Sfx1
+      value: 
+      objectReference: {fileID: 8300000, guid: d713052d26494024f8b97996b22908ee, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cd5b84f8cbc166409d55c49d64f6158, type: 3}
 --- !u!1 &1958760268
