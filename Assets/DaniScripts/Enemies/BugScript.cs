@@ -126,30 +126,35 @@ public class BugScript : MonoBehaviour
         Speed = 2f;
     }
 
-
+    
 
     private void Move()
     {
         if (StartMoving)
         {
             transform.position = Vector3.MoveTowards(transform.position, Waypoints[0].position, Speed * Time.deltaTime);
+            RotateTowardsWaypoint(Waypoints[0].position);
         }
 
         if (StartMoving2)
         {
             transform.position = Vector3.MoveTowards(transform.position, Waypoints[1].position, Speed * Time.deltaTime);
+            RotateTowardsWaypoint(Waypoints[1].position);
         }
         if (StartMoving3)
         {
             transform.position = Vector3.MoveTowards(transform.position, Waypoints[2].position, Speed * Time.deltaTime);
+            RotateTowardsWaypoint(Waypoints[2].position);
         }
         if (StartMoving4)
         {
             transform.position = Vector3.MoveTowards(transform.position, Waypoints[3].position, Speed * Time.deltaTime);
+            RotateTowardsWaypoint(Waypoints[3].position);
         }
         if (StartMoving5)
         {
             transform.position = Vector3.MoveTowards(transform.position, Waypoints[4].position, Speed * Time.deltaTime);
+            RotateTowardsWaypoint(Waypoints[4].position);
         }
 
         if (Vector3.Distance(transform.position, Waypoints[0].position) < 0.05f)
@@ -174,7 +179,12 @@ public class BugScript : MonoBehaviour
         }
     }
 
-
+    private void RotateTowardsWaypoint(Vector3 position)
+    {
+        Vector3 direction = position - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    }
 
     private void Destroyed()
     {
