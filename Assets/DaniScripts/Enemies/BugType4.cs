@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 public class BugType4 : MonoBehaviour
 {
     public int Health = 1;
-    public float Speed = 1.5f;
+    public float Speed = 1.25f;
     public Boolean TimerStart;
     public float Timer;
     public float SpeedTime;
@@ -88,7 +88,7 @@ public class BugType4 : MonoBehaviour
             Timer2 = Timer2 + Time.deltaTime;
             if (Timer2 > 2f)
             {
-                Speed = 1.5f;
+                Speed = 1.25f;
                 Timer2 = 0;
                 TimerStart2 = false;
             }
@@ -100,9 +100,9 @@ public class BugType4 : MonoBehaviour
         if (TimerStart == true)
         {
             Timer = Timer + Time.deltaTime;
-            if (Timer > 5f)
+            if (Timer > 2.5f)
             {
-                Speed = 0.75f;
+                Speed = 1.25f;
                 Timer = 0;
                 TimerStart = false;
             }
@@ -120,7 +120,7 @@ public class BugType4 : MonoBehaviour
     void Speedboost(float timer)
     {
         TimerStart = true;
-        Speed = 2f;
+        Speed = 2.25f;
     }
 
 
@@ -192,7 +192,7 @@ public class BugType4 : MonoBehaviour
                 Distance = Vector3.Distance(gameObject.transform.position, turret.transform.position);
 
 
-                if (Distance < 2.5f)
+                if (Distance < 4)
                 {
                     turret.gameObject.SendMessage("Deactivate");
                     Debug.Log(Distance);
@@ -219,7 +219,7 @@ public class BugType4 : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Health--;
-            Speed = 1f;
+            Speed = 0.75f;
             TimerStart2 = true;
         }
     }

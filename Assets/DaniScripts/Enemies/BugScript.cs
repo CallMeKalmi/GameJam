@@ -100,7 +100,7 @@ public class BugScript : MonoBehaviour
         if (TimerStart == true)
         {
             Timer = Timer + Time.deltaTime;
-            if (Timer > 5f)
+            if (Timer > 2.5f)
             {
                 Speed = 1f;
                 Timer = 0;
@@ -120,7 +120,7 @@ public class BugScript : MonoBehaviour
     void Speedboost(float timer)
     {
         TimerStart = true;
-        Speed = 1.5f;
+        Speed = 2f;
     }
 
 

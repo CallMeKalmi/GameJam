@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 public class BugType3 : MonoBehaviour
 {
     public int Health = 12;
-    public float Speed = 0.4f;
+    public float Speed = 0.75f;
     public Boolean TimerStart;
     public float Timer;
     public float SpeedTime;
@@ -79,9 +79,9 @@ public class BugType3 : MonoBehaviour
         if (TimerStart2 == true)
         {
             Timer2 = Timer2 + Time.deltaTime;
-            if (Timer2 > 5f)
+            if (Timer2 > 2f)
             {
-                Speed = 0.4f;
+                Speed = 0.75f;
                 Timer2 = 0;
                 TimerStart2 = false;
             }
@@ -92,7 +92,7 @@ public class BugType3 : MonoBehaviour
         if (TimerStart == true)
         {
             Timer = Timer + Time.deltaTime;
-            if (Timer > 2f)
+            if (Timer > 2.5f)
             {
                 Speed = 0.75f;
                 Timer = 0;
@@ -112,7 +112,7 @@ public class BugType3 : MonoBehaviour
     void Speedboost(float timer)
     {
         TimerStart = true;
-        Speed = 0.9f;
+        Speed = 1.75f;
     }
 
     private void Move()
@@ -189,7 +189,7 @@ public class BugType3 : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Health--;
-            Speed = 0.2f;
+            Speed = 0.5f;
             TimerStart2 = true;
         }
     }

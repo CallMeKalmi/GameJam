@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83476c74d6f4e246bf8bddd6813a70f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 5
+  Health: 1
   Speed: 1.5
   TimerStart: 0
   Timer: 0
