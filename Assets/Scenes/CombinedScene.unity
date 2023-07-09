@@ -2833,6 +2833,10 @@ MonoBehaviour:
   _attackButton1: {fileID: 922224822}
   _attackButton2: {fileID: 1768192108}
   _attackButton3: {fileID: 600522202}
+  _firstBugNumber: 5
+  _secondBugNumber: 3
+  _thirdBugNumber: 4
+  _fourthBugNumber: 6
   _prefabAnt1: {fileID: 3833537415105944686, guid: bedf81baf144dc94280a69847f5fcc13, type: 3}
   _prefabLadybug1: {fileID: 894199734650996667, guid: b4c309623ef871946bf7de6e951395b9, type: 3}
   _prefabBeetle1: {fileID: 6453631640422548599, guid: b799d259e8812d54480c7bd676d2b39c, type: 3}
@@ -4187,6 +4191,10 @@ PrefabInstance:
     - target: {fileID: 6023959300017064125, guid: 0e6300cb3852a87439931e63cd668d36, type: 3}
       propertyPath: m_Name
       value: TowerBasic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023959300017064125, guid: 0e6300cb3852a87439931e63cd668d36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6023959300017064127, guid: 0e6300cb3852a87439931e63cd668d36, type: 3}
       propertyPath: m_RootOrder
