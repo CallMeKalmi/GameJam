@@ -30,10 +30,10 @@ public class MainLevelUI : MonoBehaviour
     //[SerializeField] GameObject _objective2;
     //[SerializeField] GameObject _objective3;
 
-    int _firstBugNumber = 5;
-    int _secondBugNumber = 3;
-    int _thirdBugNumber = 4;
-    int _fourthBugNumber = 6;
+    [SerializeField] int _firstBugNumber = 5;
+    [SerializeField] int _secondBugNumber = 3;
+    [SerializeField] int _thirdBugNumber = 4;
+    [SerializeField] int _fourthBugNumber = 6;
 
     Vector3 _spawnLocation;
     [SerializeField] GameObject _prefabAnt1;
