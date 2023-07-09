@@ -63,7 +63,7 @@ public class MainLevelUI : MonoBehaviour
     GameObject _currentFourthBug;
 
     float _time = 0;
-    float _spawnRate = 1f;
+    float _spawnRate = 0.25f;
 
     // Start is called before the first frame update
     void Start()
