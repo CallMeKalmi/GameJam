@@ -123,7 +123,7 @@ public class BugType2Script : MonoBehaviour
             {
                 Distance = Vector3.Distance(gameObject.transform.position, go.transform.position);
 
-                if (Distance < 2.5f)
+                if (Distance < 4f)
                 {
                     go.gameObject.SendMessage("Speedboost", 5f);
                 }
@@ -136,7 +136,7 @@ public class BugType2Script : MonoBehaviour
     void Speedboost(float timer)
     {
         TimerStart = true;
-        Speed = 1.5f;
+        Speed = 1.75f;
     }
 
     private void ManualDamage()

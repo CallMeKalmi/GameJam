@@ -112,7 +112,7 @@ public class BugType3 : MonoBehaviour
     void Speedboost(float timer)
     {
         TimerStart = true;
-        Speed = 0.6f;
+        Speed = 0.9f;
     }
 
     private void Move()

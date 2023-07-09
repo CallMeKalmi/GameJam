@@ -9,7 +9,7 @@ using static UnityEngine.GraphicsBuffer;
 public class BugScript : MonoBehaviour
 {
     public int Health = 5;
-    public float Speed = 0.75f;
+    public float Speed = 1f;
     public Transform [] Waypoints;
     public Boolean TimerStart;
     public float Timer;
@@ -88,7 +88,7 @@ public class BugScript : MonoBehaviour
             Timer2 = Timer2 + Time.deltaTime;
             if (Timer2 > 2f)
             {
-                Speed = 0.75f;
+                Speed = 1f;
                 Timer2 = 0;
                 TimerStart2 = false;
             }
@@ -102,7 +102,7 @@ public class BugScript : MonoBehaviour
             Timer = Timer + Time.deltaTime;
             if (Timer > 5f)
             {
-                Speed = 0.75f;
+                Speed = 1f;
                 Timer = 0;
                 TimerStart = false;
             }
@@ -120,7 +120,7 @@ public class BugScript : MonoBehaviour
     void Speedboost(float timer)
     {
         TimerStart = true;
-        Speed = 1.25f;
+        Speed = 1.5f;
     }
 
 
