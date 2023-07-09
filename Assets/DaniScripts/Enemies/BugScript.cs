@@ -31,6 +31,9 @@ public class BugScript : MonoBehaviour
     public bool Path1;
     public bool Path2;
     public bool Path3;
+
+    public AudioSource Src;
+    public AudioClip Sfx1, Sfx2, Sfx3;
     // Start is called before the first frame update
     void Start()
     {
@@ -177,6 +180,8 @@ public class BugScript : MonoBehaviour
     {
         if (Health < 1)
         {
+            Src.clip = Sfx1;
+            Src.Play();
             Destroy(gameObject);
         }
     }
