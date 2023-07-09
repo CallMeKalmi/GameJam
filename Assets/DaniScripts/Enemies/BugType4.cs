@@ -178,8 +178,9 @@ public class BugType4 : MonoBehaviour
     {
         if (Health < 1)
         {
-            Destroy(gameObject);
             DeactiveTurrets();
+            Destroy(gameObject);
+
         }
     }
 
@@ -187,17 +188,13 @@ public class BugType4 : MonoBehaviour
     {
         foreach (GameObject turret in Turrets)
         {
-            if (turret != null)
-            {
                 Distance = Vector3.Distance(gameObject.transform.position, turret.transform.position);
 
-
-                if (Distance < 4)
+                if (Distance < 6)
                 {
                     turret.gameObject.SendMessage("Deactivate");
-                    Debug.Log(Distance);
+
                 }
-            }
 
 
         }

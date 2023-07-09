@@ -539,10 +539,10 @@ MonoBehaviour:
   _attackButton1: {fileID: 887148825}
   _attackButton2: {fileID: 2051986340}
   _attackButton3: {fileID: 1555218237}
-  _firstBugNumber: 5
-  _secondBugNumber: 3
-  _thirdBugNumber: 4
-  _fourthBugNumber: 6
+  _firstBugNumber: 10
+  _secondBugNumber: 5
+  _thirdBugNumber: 6
+  _fourthBugNumber: 4
   _prefabAnt1: {fileID: 3833537415105944686, guid: bedf81baf144dc94280a69847f5fcc13, type: 3}
   _prefabLadybug1: {fileID: 894199734650996667, guid: b4c309623ef871946bf7de6e951395b9, type: 3}
   _prefabBeetle1: {fileID: 6453631640422548599, guid: b799d259e8812d54480c7bd676d2b39c, type: 3}
