@@ -36,16 +36,32 @@ public class MainLevelUI : MonoBehaviour
     int _fourthBugNumber = 6;
 
     Vector3 _spawnLocation;
-    [SerializeField] GameObject _prefabAnt;
-    [SerializeField] GameObject _prefabLadybug;
-    [SerializeField] GameObject _prefabBeetle;
-    [SerializeField] GameObject _prefabFly;
+    [SerializeField] GameObject _prefabAnt1;
+    [SerializeField] GameObject _prefabLadybug1;
+    [SerializeField] GameObject _prefabBeetle1;
+    [SerializeField] GameObject _prefabFly1;
+
+    [SerializeField] GameObject _prefabAnt2;
+    [SerializeField] GameObject _prefabLadybug2;
+    [SerializeField] GameObject _prefabBeetle2;
+    [SerializeField] GameObject _prefabFly2;
+
+    [SerializeField] GameObject _prefabAnt3;
+    [SerializeField] GameObject _prefabLadybug3;
+    [SerializeField] GameObject _prefabBeetle3;
+    [SerializeField] GameObject _prefabFly3;
+
     Transform _spawnPoit1;
     Transform _spawnPoit2;
     Transform _spawnPoit3;
 
     int _bugsLeft;
-    
+
+    GameObject _currentFirstBug;
+    GameObject _currentSecondBug;
+    GameObject _currentThirdBug;
+    GameObject _currentFourthBug;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -95,7 +111,22 @@ public class MainLevelUI : MonoBehaviour
     {
         if (!_attackButton1.IsInteractable())
         {
-            if (_spawnLocation == _spawnPoit1.position)
+            if (_currentFirstBug == _prefabAnt1)
+            {
+                DeactivateBottomButtons();
+            }
+        }
+
+        if (!_attackButton2.IsInteractable())
+        {
+            if (_currentFirstBug == _prefabAnt2)
+            {
+                DeactivateBottomButtons();
+            }
+        }
+        if (!_attackButton3.IsInteractable())
+        {
+            if (_currentFirstBug == _prefabAnt3)
             {
                 DeactivateBottomButtons();
             }
@@ -112,6 +143,10 @@ public class MainLevelUI : MonoBehaviour
 
     public void FirstAttackButtonPress()
     {
+        _currentFirstBug = _prefabAnt1;
+        _currentSecondBug= _prefabLadybug1;
+        _currentThirdBug = _prefabBeetle1;
+        _currentFourthBug = _prefabFly1;
         ActivateBottomButtons();
         //RectTransform uiElementRect = _attackButton1.GetComponent<RectTransform>();
         _spawnLocation = _spawnPoit1.position;
@@ -121,6 +156,10 @@ public class MainLevelUI : MonoBehaviour
 
     public void SecondAttackButtonPress()
     {
+        _currentFirstBug = _prefabAnt2;
+        _currentSecondBug = _prefabLadybug2;
+        _currentThirdBug = _prefabBeetle2;
+        _currentFourthBug = _prefabFly2;
         ActivateBottomButtons();
 
         //RectTransform uiElementRect = _attackButton2.GetComponent<RectTransform>();
@@ -128,6 +167,10 @@ public class MainLevelUI : MonoBehaviour
     }
     public void ThirdAttackButtonPress()
     {
+        _currentFirstBug = _prefabAnt3;
+        _currentSecondBug = _prefabLadybug3;
+        _currentThirdBug = _prefabBeetle3;
+        _currentFourthBug = _prefabFly3;
         ActivateBottomButtons();
 
         //RectTransform uiElementRect = _attackButton3.GetComponent<RectTransform>();
@@ -144,8 +187,10 @@ public class MainLevelUI : MonoBehaviour
         }
         _firstBugNumber--;
         _spawnLocation.z = 0;
-        Instantiate(_prefabAnt, _spawnLocation, Quaternion.identity);
+        Instantiate(_currentFirstBug, _spawnLocation, Quaternion.identity);
     }
+    
+
     public void SecondBugSpawn()
     {
         if (_secondBugNumber < 1)
@@ -154,8 +199,10 @@ public class MainLevelUI : MonoBehaviour
         }
         _secondBugNumber--;
         _spawnLocation.z = 0;
-        Instantiate(_prefabLadybug, _spawnLocation, Quaternion.identity);
+        Instantiate(_currentSecondBug, _spawnLocation, Quaternion.identity);
     }
+    
+    
     public void ThirdBugSpawn()
     {
         if (_thirdBugNumber < 1)
@@ -164,8 +211,9 @@ public class MainLevelUI : MonoBehaviour
         }
         _thirdBugNumber--;
         _spawnLocation.z = 0;
-        Instantiate(_prefabBeetle, _spawnLocation, Quaternion.identity);
+        Instantiate(_currentThirdBug, _spawnLocation, Quaternion.identity);
     }
+    
     public void FourthBugSpawn()
     {
         if (_fourthBugNumber < 1)
@@ -174,8 +222,9 @@ public class MainLevelUI : MonoBehaviour
         }
         _fourthBugNumber--;
         _spawnLocation.z = 0;
-        Instantiate(_prefabFly, _spawnLocation, Quaternion.identity);
+        Instantiate(_currentFourthBug, _spawnLocation, Quaternion.identity);
     }
+    
 
     public void RestartLevel()
     {
