@@ -1235,7 +1235,7 @@ PrefabInstance:
       objectReference: {fileID: 887148825}
     - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: _nextSceneName
-      value: Game
+      value: End
       objectReference: {fileID: 0}
     - target: {fileID: 4319064763170640727, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: m_RootOrder
@@ -2108,7 +2108,7 @@ PrefabInstance:
       objectReference: {fileID: 1555218237}
     - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: _nextSceneName
-      value: Game
+      value: End
       objectReference: {fileID: 0}
     - target: {fileID: 4319064763170640727, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: m_RootOrder
@@ -2976,7 +2976,7 @@ PrefabInstance:
       objectReference: {fileID: 2051986340}
     - target: {fileID: 4319064763170640724, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: _nextSceneName
-      value: Game
+      value: End
       objectReference: {fileID: 0}
     - target: {fileID: 4319064763170640727, guid: 785f59f85cc3be54fbba38f944bd747a, type: 3}
       propertyPath: m_RootOrder
