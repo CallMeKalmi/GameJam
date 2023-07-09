@@ -45,7 +45,6 @@ public class BugScript : MonoBehaviour
 
         if (Path1)
         {
-            Debug.Log("Button1 pressed");
             Waypoints[0] = GameObject.FindGameObjectWithTag("W1").transform;
             Waypoints[1] = GameObject.FindGameObjectWithTag("W2").transform;
             Waypoints[2] = GameObject.FindGameObjectWithTag("W3").transform;

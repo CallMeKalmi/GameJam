@@ -223,7 +223,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 12
   Speed: 0.4
-  Goal: {fileID: 0}
   TimerStart: 0
   Timer: 0
   SpeedTime: 0
@@ -242,3 +241,6 @@ MonoBehaviour:
   - {fileID: 3938299074472342243, guid: de4254972a8e93f49b429d2a079df0d7, type: 3}
   - {fileID: 4078303583359623277, guid: 3c0deb7125d82fd41abbf93a3744e466, type: 3}
   - {fileID: 4707856516068135199, guid: c921beb5fba3ad749a7b92eed16f0c82, type: 3}
+  Path1: 1
+  Path2: 0
+  Path3: 0
