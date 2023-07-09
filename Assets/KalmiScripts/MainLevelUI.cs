@@ -62,6 +62,9 @@ public class MainLevelUI : MonoBehaviour
     GameObject _currentThirdBug;
     GameObject _currentFourthBug;
 
+    float _time = 0;
+    float _spawnRate = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -92,6 +95,7 @@ public class MainLevelUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _time += Time.deltaTime;
         //AddBugsLeft();
         TextUpdate();
         CheckIfPathsAreAvalible();
@@ -181,6 +185,8 @@ public class MainLevelUI : MonoBehaviour
 
     public void FirstBugSpawn()
     {
+        if (_time < _spawnRate) return;
+        _time = 0;
         if (_firstBugNumber < 1)
         {
             return;
@@ -193,6 +199,8 @@ public class MainLevelUI : MonoBehaviour
 
     public void SecondBugSpawn()
     {
+        if (_time < _spawnRate) return;
+        _time = 0;
         if (_secondBugNumber < 1)
         {
             return;
@@ -205,6 +213,8 @@ public class MainLevelUI : MonoBehaviour
     
     public void ThirdBugSpawn()
     {
+        if (_time < _spawnRate) return;
+        _time = 0;
         if (_thirdBugNumber < 1)
         {
             return;
@@ -216,6 +226,8 @@ public class MainLevelUI : MonoBehaviour
     
     public void FourthBugSpawn()
     {
+        if (_time < _spawnRate) return;
+        _time = 0;
         if (_fourthBugNumber < 1)
         {
             return;
