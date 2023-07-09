@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 5
-  Speed: 0.75
+  Speed: 0.8
   Waypoints:
   - {fileID: 0}
   - {fileID: 0}

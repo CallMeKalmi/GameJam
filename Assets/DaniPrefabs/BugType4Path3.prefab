@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 1
-  Speed: 1.5
+  Speed: 1.4
   TimerStart: 0
   Timer: 0
   SpeedTime: 0

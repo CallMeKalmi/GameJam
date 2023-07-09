@@ -10,7 +10,7 @@ using static UnityEngine.GraphicsBuffer;
 public class BugScript : MonoBehaviour
 {
     public int Health = 5;
-    public float Speed = 1f;
+    public float Speed = 0.8f;
     public Transform [] Waypoints;
     public Boolean TimerStart;
     public float Timer;
@@ -90,7 +90,7 @@ public class BugScript : MonoBehaviour
             Timer2 = Timer2 + Time.deltaTime;
             if (Timer2 > 2f)
             {
-                Speed = 1f;
+                Speed = 0.8f;
                 Timer2 = 0;
                 TimerStart2 = false;
             }
@@ -104,7 +104,7 @@ public class BugScript : MonoBehaviour
             Timer = Timer + Time.deltaTime;
             if (Timer > 2.5f)
             {
-                Speed = 1f;
+                Speed = 0.8f;
                 Timer = 0;
                 TimerStart = false;
             }
@@ -122,7 +122,7 @@ public class BugScript : MonoBehaviour
     void Speedboost(float timer)
     {
         TimerStart = true;
-        Speed = 2f;
+        Speed = 1.8f;
     }
 
     
@@ -235,7 +235,7 @@ public class BugScript : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Health--;
-            Speed = 0.5f;
+            Speed = 0.4f;
             TimerStart2 = true;
 
         }
