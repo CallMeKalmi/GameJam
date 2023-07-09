@@ -17,6 +17,9 @@ public class Tower : MonoBehaviour
     public float Timer;
     public Boolean Active = true;
 
+    public AudioSource Src;
+    public AudioClip Sfx1;
+
     private void Update()
     {
         if (Active == true)
@@ -63,7 +66,10 @@ public class Tower : MonoBehaviour
         {
             _time= 0;
             Instantiate(_bullet, transform.position, transform.rotation);
-            
+            Src.clip = Sfx1;
+            Src.volume = 0.005f;
+            Src.Play();
+
         }
         
 
