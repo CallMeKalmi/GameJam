@@ -15,6 +15,9 @@ public class RoseTower : MonoBehaviour
     public Boolean TimerStart;
     public float Timer;
     public Boolean Active = true;
+
+    public AudioSource Src;
+    public AudioClip Sfx1;
     private void Update()
     {
         if (Active == true)
@@ -54,6 +57,9 @@ public class RoseTower : MonoBehaviour
         {
             _time = 0;
             Instantiate(_bullet, transform.position, transform.rotation);
+            Src.clip = Sfx1;
+            Src.volume = 0.01f;
+            Src.Play();
         }
 
 

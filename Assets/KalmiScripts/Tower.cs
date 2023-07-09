@@ -67,7 +67,7 @@ public class Tower : MonoBehaviour
             _time= 0;
             Instantiate(_bullet, transform.position, transform.rotation);
             Src.clip = Sfx1;
-            Src.volume = 0.005f;
+            Src.volume = 0.01f;
             Src.Play();
 
         }
