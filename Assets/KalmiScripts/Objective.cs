@@ -5,9 +5,11 @@ using UnityEngine.UI;
 //using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using static UnityEngine.GraphicsBuffer;
+using TMPro;
 
 public class Objective : MonoBehaviour
 {
+    [SerializeField] TextMeshProUGUI _text;
     [SerializeField] int _hp = 2;
     [SerializeField] Button _button;
     //[SerializeField] int _numberOfObjectives;
@@ -17,6 +19,7 @@ public class Objective : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _text.text = $"Bugs needed: {_hp}";
         if (_hp <= 0)
         {
             Src.clip = Sfx1;
