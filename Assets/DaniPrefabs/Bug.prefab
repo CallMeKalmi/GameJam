@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 5
-  Speed: 0.75
+  Speed: 0.8
   Waypoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -129,8 +129,6 @@ MonoBehaviour:
   Path1: 1
   Path2: 0
   Path3: 0
-  Src: {fileID: 8038787642067451047, guid: 7088e194127f58049a10cc65816e1931, type: 3}
-  Sfx1: {fileID: 8300000, guid: d0e553d35e7ecb5419318d177a01eaeb, type: 3}
 --- !u!58 &3833537415105944682
 CircleCollider2D:
   m_ObjectHideFlags: 0

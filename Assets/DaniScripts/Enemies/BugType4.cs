@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 public class BugType4 : MonoBehaviour
 {
     public int Health = 1;
-    public float Speed = 1.25f;
+    public float Speed = 1.4f;
     public Boolean TimerStart;
     public float Timer;
     public float SpeedTime;
@@ -88,7 +88,7 @@ public class BugType4 : MonoBehaviour
             Timer2 = Timer2 + Time.deltaTime;
             if (Timer2 > 2f)
             {
-                Speed = 1.25f;
+                Speed = 1.4f;
                 Timer2 = 0;
                 TimerStart2 = false;
             }
@@ -102,7 +102,7 @@ public class BugType4 : MonoBehaviour
             Timer = Timer + Time.deltaTime;
             if (Timer > 2.5f)
             {
-                Speed = 1.25f;
+                Speed = 1.4f;
                 Timer = 0;
                 TimerStart = false;
             }
@@ -120,7 +120,7 @@ public class BugType4 : MonoBehaviour
     void Speedboost(float timer)
     {
         TimerStart = true;
-        Speed = 2.25f;
+        Speed = 2.4f;
     }
 
 

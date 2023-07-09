@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 12
-  Speed: 0.4
+  Speed: 0.6
   TimerStart: 0
   Timer: 0
   SpeedTime: 0

@@ -19,14 +19,15 @@ public class Objective : MonoBehaviour
     {
         if (_hp <= 0)
         {
+            Src.clip = Sfx1;
+            Src.volume = 0.05f;
+            Src.Play();
             Destroy(gameObject);
             _button.interactable = false;
             MainLevelUI.NumberOfObjectives--;
             if (MainLevelUI.NumberOfObjectives < 1)
             {
-                Src.clip = Sfx1;
-                Src.volume = 0.01f;
-                Src.Play();
+
                 SceneManager.LoadScene(_nextSceneName);
             }
             
