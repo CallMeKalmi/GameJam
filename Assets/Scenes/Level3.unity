@@ -611,7 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ccb8f21e6c3a64eacd315ba78e424d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _numberOfObjectives: 2
+  _numberOfObjectives: 3
   _button1: {fileID: 1958760272}
   _button2: {fileID: 1200573336}
   _button3: {fileID: 915892492}
